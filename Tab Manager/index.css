@@ -1,0 +1,209 @@
+html {
+    height: fit-content;
+    max-height: 800px;
+    max-width: 400px;
+}
+
+body {
+    margin: 0;
+    padding: 8px 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    height: min-content;
+    max-height: 800px;
+    user-select: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: oklch(0.97 0 0);
+}
+
+.header h2 {
+    font-size: 16px;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.header .buttons button {
+    background: transparent;
+    border: 1px solid oklch(0.97 0 0);
+    color: white;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: inherit;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header button:hover {
+    background: oklch(0.97 0 0 / .1);
+}
+
+#add-category-container[aria-hidden="true"] {
+    display: none;
+}
+
+#add-category-input {
+    background: transparent;
+    border: 1px solid oklch(0.97 0 0);
+    color: oklch(0.97 0 0);
+    padding: 4px 8px;
+    border-radius: 2px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#add-category-container .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#add-category-container .buttons button {
+    width: 40%;
+    padding: 4px 0;
+    background: transparent;
+    border: 1px solid oklch(0.97 0 0);
+    color: oklch(0.97 0 0);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-weight: 600;
+}
+
+#add-category-container .buttons #cancel-add-category {
+    border: 1px solid oklch(0.808 0.114 19.571);
+    color: oklch(0.808 0.114 19.571);
+}
+
+#add-category-container .buttons button:hover {
+    background: oklch(0.97 0 0 / .1);
+}
+
+.divider {
+    width: 300px;
+    height: 1px;
+    background: oklch(0.97 0 0 / .75);
+    margin: 8px auto;
+}
+
+.category-tab {
+    border: 1px solid oklch(0.97 0 0 / .25);
+}
+
+.category-tab:first-child {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.category-tab:last-child {
+    border-radius: 0px 0px 4px 4px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    color: oklch(0.97 0 0);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.category-header:hover {
+    background: oklch(0.97 0 0 / .1);
+}
+
+.category-header h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.category-header svg.inactive {
+    display: none;
+}
+
+.category-body[aria-expanded="false"] {
+    display: none;
+}
+
+.category-body {
+    padding: 6px 8px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: oklch(0.97 0 0);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.tab-link span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.tab:first-child:not(:only-child) {
+    margin-bottom: 8px;
+}
+
+.tab:not(:first-child):not(:last-child):not(:only-child) {
+    margin: 8px 0px;
+}
+
+.tab:last-child:not(:only-child) {
+    margin-top: 8px;
+}
+
+.tab-link:hover {
+    color: oklch(0.87 0.065 274.039);
+}
+
+.tab-link img {
+    width: 18px;
+    height: 18px;
+    aspect-ratio: 1;
+    margin-right: 8px;
+}
+
+.tab .delete-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: transparent;
+    margin: 0;
+    padding: 0;
+    color: oklch(0.808 0.114 19.571);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.tab .delete-tab:hover {
+    color: oklch(0.704 0.191 22.216);
+}
+
+.tab .delete-tab svg {
+    width: 16px;
+    height: 16px;
+    aspect-ratio: 1;
+}
